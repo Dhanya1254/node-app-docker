@@ -28,10 +28,10 @@ pipeline {
        steps{
     tagImage([
             sourceImagePath: "dhanya-jenkins",
-            sourceImageName: "dhanyashree/node-server",
+            sourceImageName: "docker.io/dhanyashree/node-server",
             sourceImageTag : "latest",
             toImagePath: "dhanya-jenkins",
-            toImageName    : "dhanyashree/node-server",
+            toImageName    : "docker.io/dhanyashree/node-server",
             toImageTag     : "${COMMIT_ID}"
       
     ])
