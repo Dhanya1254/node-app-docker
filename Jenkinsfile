@@ -6,7 +6,7 @@ retriever: modernSCM(
   ]
 )
 
-appName = "node-app-backend"
+appName = "node-app-backend-t"
 
 pipeline {
     agent any
@@ -34,18 +34,18 @@ pipeline {
     ])
        }
 }
-      stage('deploy') {
-        steps {
-            script {
-                openshift.withCluster() {
-                    openshift.withProject("$PROJECT_NAME") {
-                        echo "Using project: ${openshift.project()}"
-                         sh 'oc project "$PROJECT_NAME" '
-                         sh 'oc apply -f pod.yaml'
-                    }
-                }
-            }
-    }
- }
+//       stage('deploy') {
+//         steps {
+//             script {
+//                 openshift.withCluster() {
+//                     openshift.withProject("$PROJECT_NAME") {
+//                         echo "Using project: ${openshift.project()}"
+//                          sh 'oc project "$PROJECT_NAME" '
+//                          sh 'oc apply -f pod.yaml'
+//                     }
+//                 }
+//             }
+//     }
+//  }
    }
 }
