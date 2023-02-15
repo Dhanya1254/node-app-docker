@@ -6,8 +6,8 @@ retriever: modernSCM(
   ]
 )
 
-appName = "node-app-backend"
-configname= "node-app-frontend"
+appName = "node-app-backend-t"
+configname= "node-app-frontend-t"
 
 pipeline {
     agent any
